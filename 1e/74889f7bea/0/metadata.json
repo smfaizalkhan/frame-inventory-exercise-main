@@ -1,0 +1,62 @@
+{
+  "cli_version": "0.7.8",
+  "checkpoint_id": "1e74889f7bea",
+  "session_id": "019f310d-c774-74d2-a73f-3010c9b70584",
+  "strategy": "manual-commit",
+  "created_at": "2026-07-05T08:08:59.282204Z",
+  "branch": "master",
+  "checkpoints_count": 1,
+  "save_step_count": 1,
+  "files_touched": [
+    "src/backend/build.gradle",
+    "src/backend/src/main/java/com/global/ct/frameinventory/Application.java",
+    "src/backend/src/main/java/com/global/ct/frameinventory/domain/ChangeType.java",
+    "src/backend/src/main/java/com/global/ct/frameinventory/domain/Commercials.java",
+    "src/backend/src/main/java/com/global/ct/frameinventory/domain/ExternalRefs.java",
+    "src/backend/src/main/java/com/global/ct/frameinventory/domain/Frame.java",
+    "src/backend/src/main/java/com/global/ct/frameinventory/domain/FrameFormat.java",
+    "src/backend/src/main/java/com/global/ct/frameinventory/domain/FrameHistory.java",
+    "src/backend/src/main/java/com/global/ct/frameinventory/domain/FrameStatus.java",
+    "src/backend/src/main/java/com/global/ct/frameinventory/domain/Lifecycle.java",
+    "src/backend/src/main/java/com/global/ct/frameinventory/domain/Location.java",
+    "src/backend/src/main/java/com/global/ct/frameinventory/domain/MediaType.java",
+    "src/backend/src/main/java/com/global/ct/frameinventory/domain/Site.java",
+    "src/backend/src/main/java/com/global/ct/frameinventory/domain/SiteType.java"
+  ],
+  "agent": "Codex",
+  "model": "gpt-5.5",
+  "turn_id": "dcdc4baff377",
+  "checkpoint_transcript_start": 177,
+  "transcript_lines_at_start": 177,
+  "token_usage": {
+    "input_tokens": 43717,
+    "cache_creation_tokens": 0,
+    "cache_read_tokens": 741888,
+    "output_tokens": 6855,
+    "api_call_count": 16
+  },
+  "session_metrics": {
+    "turn_count": 2
+  },
+  "initial_attribution": {
+    "calculated_at": "2026-07-05T08:08:59.264366Z",
+    "agent_lines": 488,
+    "agent_removed": 0,
+    "human_added": 1167,
+    "human_modified": 31,
+    "human_removed": 0,
+    "total_committed": 1686,
+    "total_lines_changed": 1689,
+    "agent_percentage": 28.89283599763173,
+    "metric_version": 2
+  },
+  "prompt_attributions": [
+    {
+      "checkpoint_number": 1,
+      "user_lines_added": 0,
+      "user_lines_removed": 0,
+      "agent_lines_added": 0,
+      "agent_lines_removed": 0
+    }
+  ]
+}

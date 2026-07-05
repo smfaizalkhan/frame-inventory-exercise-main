@@ -1,0 +1,40 @@
+{
+  "cli_version": "0.7.8",
+  "checkpoint_version": "branch-v1",
+  "checkpoint_id": "1e74889f7bea",
+  "strategy": "manual-commit",
+  "branch": "master",
+  "checkpoints_count": 1,
+  "files_touched": [
+    "src/backend/build.gradle",
+    "src/backend/src/main/java/com/global/ct/frameinventory/Application.java",
+    "src/backend/src/main/java/com/global/ct/frameinventory/domain/ChangeType.java",
+    "src/backend/src/main/java/com/global/ct/frameinventory/domain/Commercials.java",
+    "src/backend/src/main/java/com/global/ct/frameinventory/domain/ExternalRefs.java",
+    "src/backend/src/main/java/com/global/ct/frameinventory/domain/Frame.java",
+    "src/backend/src/main/java/com/global/ct/frameinventory/domain/FrameFormat.java",
+    "src/backend/src/main/java/com/global/ct/frameinventory/domain/FrameHistory.java",
+    "src/backend/src/main/java/com/global/ct/frameinventory/domain/FrameStatus.java",
+    "src/backend/src/main/java/com/global/ct/frameinventory/domain/Lifecycle.java",
+    "src/backend/src/main/java/com/global/ct/frameinventory/domain/Location.java",
+    "src/backend/src/main/java/com/global/ct/frameinventory/domain/MediaType.java",
+    "src/backend/src/main/java/com/global/ct/frameinventory/domain/Site.java",
+    "src/backend/src/main/java/com/global/ct/frameinventory/domain/SiteType.java"
+  ],
+  "sessions": [
+    {
+      "metadata": "/1e/74889f7bea/0/metadata.json",
+      "transcript": "/1e/74889f7bea/0/full.jsonl",
+      "compact_transcript": "/1e/74889f7bea/0/transcript.jsonl",
+      "content_hash": "/1e/74889f7bea/0/content_hash.txt",
+      "prompt": "/1e/74889f7bea/0/prompt.txt"
+    }
+  ],
+  "token_usage": {
+    "input_tokens": 43717,
+    "cache_creation_tokens": 0,
+    "cache_read_tokens": 741888,
+    "output_tokens": 6855,
+    "api_call_count": 16
+  }
+}

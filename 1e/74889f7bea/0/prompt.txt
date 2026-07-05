@@ -1,0 +1,1 @@
+codex "Read specs/CODEX_INSTRUCTIONS.md and specs/DOMAIN_MODEL.md then implement step 2 from the build order: create the Frame and FrameHistory MongoDB domain model including all enums"
