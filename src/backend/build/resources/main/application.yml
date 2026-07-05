@@ -1,0 +1,15 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: frame-inventory-backend
+  data:
+    mongodb:
+      uri: mongodb://root:root@localhost:27017/frames?authSource=admin
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
