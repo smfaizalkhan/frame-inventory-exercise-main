@@ -1,0 +1,1 @@
+Read specs/CODEX_INSTRUCTIONS.md and implement step 1 from the build order
