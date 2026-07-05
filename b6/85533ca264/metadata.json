@@ -1,0 +1,28 @@
+{
+  "cli_version": "0.7.8",
+  "checkpoint_version": "branch-v1",
+  "checkpoint_id": "b685533ca264",
+  "strategy": "manual-commit",
+  "branch": "master",
+  "checkpoints_count": 1,
+  "files_touched": [
+    "src/backend/src/main/java/com/global/ct/frameinventory/repository/FrameHistoryRepository.java",
+    "src/backend/src/main/java/com/global/ct/frameinventory/repository/FrameRepository.java"
+  ],
+  "sessions": [
+    {
+      "metadata": "/b6/85533ca264/0/metadata.json",
+      "transcript": "/b6/85533ca264/0/full.jsonl",
+      "compact_transcript": "/b6/85533ca264/0/transcript.jsonl",
+      "content_hash": "/b6/85533ca264/0/content_hash.txt",
+      "prompt": "/b6/85533ca264/0/prompt.txt"
+    }
+  ],
+  "token_usage": {
+    "input_tokens": 139950,
+    "cache_creation_tokens": 0,
+    "cache_read_tokens": 2724096,
+    "output_tokens": 19535,
+    "api_call_count": 58
+  }
+}

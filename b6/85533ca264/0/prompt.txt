@@ -1,0 +1,5 @@
+codex "Read specs/CODEX_INSTRUCTIONS.md and specs/DOMAIN_MODEL.md then implement step 2 from the build order: create the Frame and FrameHistory MongoDB domain model including all enums"
+
+---
+
+codex "Read AGENTS.md then read specs/CODEX_INSTRUCTIONS.md and specs/DOMAIN_MODEL.md and implement step 3 from the build order: create FrameRepository and FrameHistoryRepository using Spring Data MongoDB"
