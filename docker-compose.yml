@@ -1,0 +1,71 @@
+services:
+  backend:
+    build:
+      context: ./src/backend
+    container_name: frame-inventory-backend
+    ports:
+      - "8080:8080"
+    environment:
+      SPRING_PROFILES_ACTIVE: docker
+    depends_on:
+      mongodb:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD-SHELL", "bash -ec 'exec 3<>/dev/tcp/127.0.0.1/8080; printf \"GET /api/health HTTP/1.1\\r\\nHost: 127.0.0.1\\r\\nConnection: close\\r\\n\\r\\n\" >&3; head -n 1 <&3 | grep -q \"200\"'"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 30s
+    networks:
+      - frame-inventory
+
+  frontend:
+    build:
+      context: ./src/frontend
+    container_name: frame-inventory-frontend
+    ports:
+      - "3001:3000"
+    environment:
+      VITE_BACKEND_URL: http://backend:8080
+    volumes:
+      - ./src/frontend/src:/app/src
+      - ./src/frontend/public:/app/public
+      - ./src/frontend/index.html:/app/index.html
+    depends_on:
+      backend:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD-SHELL", "wget --spider -q http://127.0.0.1:3000/ || exit 1"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 10s
+    networks:
+      - frame-inventory
+
+  mongodb:
+    image: mongo:7
+    container_name: frame-inventory-mongodb
+    ports:
+      - "27017:27017"
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: root
+      MONGO_INITDB_DATABASE: frames
+    volumes:
+      - mongodb-data:/data/db
+    healthcheck:
+      test: ["CMD-SHELL", "mongosh --quiet --eval \"db.adminCommand('ping').ok\" | grep 1"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 10s
+    networks:
+      - frame-inventory
+
+volumes:
+  mongodb-data:
+
+networks:
+  frame-inventory:
+    driver: bridge
